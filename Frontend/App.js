@@ -28,6 +28,7 @@ import ListingCheckout from "./components/ListingCheckout";
 import MyListingDetails from "./components/MyListingDetails";
 import OrderDetails from "./OrderDetails";
 import OrderListingDetail from "./components/OrderListingDetail";
+import ChatScreen from "./ChatScreen";
 const theme = {
   ...DefaultTheme,
   colors: {
@@ -124,8 +125,7 @@ export default function App() {
         <PaperProvider theme={theme}>
           <NavigationContainer>
             <Stack.Navigator
-              initialRouteName="Login"
-              
+              initialRouteName="AppIntro"
               screenOptions={{
                 headerShown: false,
                 cardStyle: { backgroundColor: "#FFFFFF" },
@@ -164,6 +164,7 @@ export default function App() {
               <Stack.Screen name="Signup" component={Signup} />
               <Stack.Screen name="ListingForm" component={ListingForm} />
               <Stack.Screen name="ListingList" component={ListingDetail} />
+              <Stack.Screen name="ChatScreen" component={ChatScreen} />
               <Stack.Screen
                 name="OrderListingDetail"
                 component={OrderListingDetail}

@@ -89,10 +89,7 @@ const SettingsScreen = () => {
     } catch (error) {}
   };
   const handleHelp = () => {
-    Alert.alert(
-      "Help & Support",
-      "Contact our support team:\nEmail: mbasit467@gmail.com\nPhone: +92-314-5033005"
-    );
+    navigation.navigate("ChatScreen");
   };
 
   const SettingCard = ({ icon, title, value, onPress, color = "#6C5CE7" }) => (

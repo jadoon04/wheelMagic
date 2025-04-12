@@ -48,6 +48,11 @@ import {
   updateAdminOrderController,
   updateOrderStatus,
 } from "../controllers/listingsController.js";
+import {
+  getAllChatsController,
+  getSpecificChatController,
+  sendMessageController,
+} from "../controllers/chatController.js";
 
 const router = express.Router();
 router.post("/api/upload/product", addProductController);
@@ -100,4 +105,7 @@ router.get("/api/all/admin_orders", getAllAdminOrdersController);
 router.post("/api/all/admin_orders/update", updateAdminOrderController);
 
 router.get("/api/all/admin_noti", getAllAdminNotificationController);
+router.post("/api/send_message", sendMessageController);
+router.get("/api/get_messages_user/:id", getSpecificChatController);
+router.get("/api/all_messages/", getAllChatsController);
 export default router;

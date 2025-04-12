@@ -25,8 +25,8 @@ import { useMyContext } from "./CartContext";
 const LoginScreen = () => {
   const { setUser } = useMyContext();
   const navigation = useNavigation();
-  const [email, setEmail] = useState("mbasit467@gmail.com");
-  const [password, setPassword] = useState("123456789");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const auth = getAuth(app);
@@ -160,6 +160,7 @@ const LoginScreen = () => {
         style={styles.keyboardView}
       >
         <ScrollView showsVerticalScrollIndicator={false}>
+          <Text style={styles.titleLrg}>Wheel Magic</Text>
           <View style={styles.contentContainer}>
             <Text style={styles.title}>Welcome Back!</Text>
             <Text style={styles.subtitle}>Please sign in to continue</Text>
@@ -242,8 +243,16 @@ const styles = StyleSheet.create({
     padding: 24,
     justifyContent: "center",
   },
+  titleLrg: {
+    marginTop: 40,
+    fontSize: 48,
+    fontWeight: "bold",
+    color: "#522C90",
+    textAlign: "center",
+    marginBottom: 10,
+  },
   title: {
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: "bold",
     color: "#522C90",
     textAlign: "center",

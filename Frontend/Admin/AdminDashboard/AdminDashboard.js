@@ -25,6 +25,7 @@ function AdminDashboard({ navigation }) {
         title="Go to All Categories"
         onPress={() => navigation.navigate("AllOrders")}
       />
+      <Button title="Go to Help" onPress={() => navigation.navigate("Help")} />
     </View>
   );
 }

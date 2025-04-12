@@ -91,6 +91,7 @@ const Signup = ({ navigation }) => {
         style={styles.keyboardView}
       >
         <ScrollView showsVerticalScrollIndicator={false}>
+          <Text style={styles.titleLrg}>Magic Wheel</Text>
           <View style={styles.contentContainer}>
             <Text style={styles.title}>Create Account</Text>
             <Text style={styles.subtitle}>
@@ -217,13 +218,21 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
+  titleLrg: {
+    marginTop: 40,
+    fontSize: 48,
+    fontWeight: "bold",
+    color: "#522C90",
+    textAlign: "center",
+    marginBottom: 10,
+  },
   loginLink: {
     marginTop: 16,
     alignItems: "center",
   },
   loginLinkText: {
     color: "#522C90",
-    fontSize: 14,
+    fontSize: 18,
   },
 });
 

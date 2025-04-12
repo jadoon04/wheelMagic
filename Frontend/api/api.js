@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASEURL = "http://192.168.1.32:3001";
+const BASEURL = "http://172.20.10.2:3001";
 export const uploadProductData = async (formData) => {
   try {
     const config = {
@@ -220,9 +220,6 @@ export const addReviewListing = async (data) => {
   return await axios.post(`${BASEURL}/api/add/review`, data);
 };
 
-
-
-
 export const getAllOrdersAdmin = async (data) => {
   return await axios.get(`${BASEURL}/api/all/admin_orders`);
 };
@@ -230,7 +227,15 @@ export const getAllOrdersAdmin = async (data) => {
 export const updateAdminOrderStatus = async (data) => {
   return await axios.post(`${BASEURL}/api/all/admin_orders/update`, data);
 };
-
+export const sendUserMessage = async (data) => {
+  return await axios.post(`${BASEURL}/api/send_message`, data);
+};
+export const getUserMessage = async (id) => {
+  return await axios.get(`${BASEURL}/api/get_messages_user/${id}`);
+};
+export const getAllAdminChats = async (id) => {
+  return await axios.get(`${BASEURL}/api/all_messages/`);
+};
 
 export const getAllAdminNotifications = async () => {
   return await axios.get(`${BASEURL}/api/all/admin_noti`);
